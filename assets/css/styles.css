@@ -1,0 +1,83 @@
+:root {
+  --cardc: #fb8b24;
+  --highl: #d90368;
+  --dark: #291720;
+  --altc: #04a777;
+  --background: #d5d6d7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  background-image: url(../imgs/back.jpg);
+  background-color: var(--background);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  min-height: 400px;
+  text-align: center;
+  border: 5px solid #d1d0cf;
+  background-color: #efeeec;
+  background-image: url(../imgs/fondo.jpeg);
+  color: var(--highl);
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px #ffffff26 inset;
+  margin: 10px auto;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+.card .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card h1 {
+  margin: 6px 5px 0 0;
+}
+
+.card ul {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.card li {
+  text-decoration: none;
+}
+
+.Dead {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+.unknown {
+  background-image: linear-gradient(
+      rgba(255, 166, 0, 0.5),
+      rgba(255, 0, 0, 0.5)
+    ),
+    url(../imgs/fondo.jpeg);
+}
+
+/* Disable grayscale on hover */
+.Dead:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.card:hover {
+  border: 5px solid #ff4400;
+}
